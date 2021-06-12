@@ -1,17 +1,16 @@
 :root {
-    --primar: #4e4e4e;
+    --primar: #000;
     --shadow: #7c7c7c;
-    --navbar-clr: #363636;
     --white: #fff;
     --black: #000;
-    --pi-border: #331a1a;
-    --text-border: #836767;
-    --pi-bg1: #463737;
-    --pi-bg2: #352626;
+    --pi-border: #7c7c7c;
+    --text-border: #a0a0a0;
+    --pi-bg1: rgb(32, 32, 32);
+    --pi-bg2: #000;
     --fb-clr: #3b5998;
     --tw-clr: #1DA1F2;
     --gh-clr: #333;
-    --bg1-clr: #130909;
+    --bg1-clr: #575757;
     --bg2-clr: #757373;
 }
 
@@ -51,6 +50,11 @@ section {
 
 #title {
     margin: 2.5em 0 0 0;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
 }
 
 a {
@@ -235,22 +239,23 @@ li {
     text-align: center;
 }
 
-.fa-facebook-square:hover, .fa-facebook-square:focus {
+.facebook:hover, .facebook:focus {
     animation: fb 0.2s forwards;
 }
 
-.fa-twitter-square:hover, .fa-twitter-square:focus {
+.twitter:hover, .twitter:focus {
     animation: tw 0.2s forwards;
 }
 
-.fa-github-square:hover, .fa-github-square:focus {
+.github:hover, .github:focus {
     animation: gh 0.2s forwards;
 }
 
 #footer {
-    background: var(--shadow);
+    background: var(--primar);
     padding: 1.5em;
     margin-top: auto;
+    font-family: 'Staatliches', cursive;
 }
 
 @keyframes fb {
@@ -294,8 +299,8 @@ li {
     }
 
     .nav-toggle:checked ~ #navbar-shrink {
-        display: grid;
-        justify-items: left;
+        display: flex;
+        flex-direction: column;
         position: relative;
         top: 0;
         left: 0;
