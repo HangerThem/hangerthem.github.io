@@ -38,15 +38,17 @@
         <p>My favourite books are: LOTR, The Hobbit and The Silmarillion.</p>
     </section>
 
-    <div class="contact-form">
-        <form action="contact-form-email.php" class="contact-form" method="post">
-            <input name="name" type="text" class="form-control" placeholder="Name" required>
-            <input name="email" type="email" class="form-control" placeholder="Email" required>
-            <input name="subject" type="text" class="form-control" placeholder="Subject" required>
-            <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea>
-            <input name="submit" type="submit" class="form-control submit" value="SEND">
-        </form>
-    </div>
+  <form action="https://formspree.io/f/xgeryaqk" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="_replyto">
+      </label>
+      <label>
+        Your message:
+        <textarea name="message"></textarea>
+      </label>
+      <button type="submit">Send</button>
+   </form>
 
     <div id="footer">
         <div class="icons-container">
