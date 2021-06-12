@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="logo.svg" type="favicon">
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
     <script src="script.js" async></script>
     <title>Contact</title>
 </head>
@@ -29,22 +29,41 @@
         </div>
     </ul>
 
+    <section id="contact">
+        <h1 id="title">Contact me</h1>
+        <p id="age"></p>
+        <p>I am student of CS degree.</p>
+        <p id="timeSpan"></p>
+        <p>I like games, memes, D&D, and science.</p>
+        <p>My favourite books are: LOTR, The Hobbit and The Silmarillion.</p>
+    </section>
+
+    <div class="contact-form">
+        <form action="contact-form-email.php" class="contact-form" method="post">
+            <input name="name" type="text" class="form-control" placeholder="Name" required>
+            <input name="email" type="email" class="form-control" placeholder="Email" required>
+            <input name="subject" type="text" class="form-control" placeholder="Subject" required>
+            <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea>
+            <input name="submit" type="submit" class="form-control submit" value="SEND">
+        </form>
+    </div>
+
     <div id="footer">
         <div class="icons-container">
             <div id="fb">
-                <a href="" onclick="alertOpen()"><i class="fa fa-facebook-square icons" aria-hidden="true"></i></a>
+                <a href="" onclick="alertOpen()"><i class="fa fa-facebook-square facebook icons" aria-hidden="true"></i></a>
                 <a href="" onclick="alertOpen()" class="names">Facebook</a>
             </div>
             <div id="tw">
-                <a href="" onclick="alertOpen()"><i class="fa fa-twitter-square icons" aria-hidden="true"></i></a>
+                <a href="" onclick="alertOpen()"><i class="fa fa-twitter-square twitter icons" aria-hidden="true"></i></a>
                 <a href="" onclick="alertOpen()" class="names">Twitter</a>
             </div>
             <div id="gh">
-                <a href="https://github.com/HangerThem" target="_blank"><i class="fa fa-github-square icons" aria-hidden="true"></i></a>
+                <a href="https://github.com/HangerThem" target="_blank"><i class="fa fa-github-square github icons" aria-hidden="true"></i></a>
                 <a href="https://github.com/HangerThem" target="_blank" class="names">GitHub</a>
             </div>
         </div>
-    </footer>
+    </div>
 
 </body>
 </html>
