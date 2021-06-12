@@ -24,13 +24,15 @@ function startTime() {
   }
   min = checkTime(min);
   s = checkTime(s);
-  document.getElementById('time').innerHTML =
-  h + ":" + min + ":" + s;
-   document.getElementById('date').innerHTML =
-  n + " " + d + "/" + mon + "/" + y;
+  document.getElementById('time').innerHTML = h + ":" + min + ":" + s;
+  document.getElementById('date').innerHTML = n + " " + d + "/" + mon + "/" + y;
   var t = setTimeout(startTime, 1000);
 }
 function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  if (i < 10) {i = "0" + i};
   return i;
+}
+
+function alertOpen() {
+  alert("Sorry, I don't want to link my poor social media here.");
 }
