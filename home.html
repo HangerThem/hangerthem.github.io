@@ -29,31 +29,21 @@
         </div>
     </ul>
 
-    <div class="container">
-        <h1>FormSubmit Demo</h1>
-        <form target="_blank" action="https://formsubmit.co/f.borisjuk@gmail.com" method="POST">
-            <div class="form-group">
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-                    </div>
-                    <div class="col">
-                        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-        </form>
-    </div>
-
     <footer>
-        <a href="" class="icons"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="" class="icons"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href="" class="icons"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="" class="icons"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <div class="icons-container">
+            <div id="fb">
+                <a href="" onclick="alertOpen()"><i class="fa fa-facebook-square icons" aria-hidden="true"></i></a>
+                <a href="" onclick="alertOpen()" class="names">Facebook</a>
+            </div>
+            <div id="tw">
+                <a href="" onclick="alertOpen()"><i class="fa fa-twitter-square icons" aria-hidden="true"></i></a>
+                <a href="" onclick="alertOpen()" class="names">Twitter</a>
+            </div>
+            <div id="gh">
+                <a href="https://github.com/HangerThem" target="_blank"><i class="fa fa-github-square icons" aria-hidden="true"></i></a>
+                <a href="" onclick="alertOpen()" class="names">GitHub</a>
+            </div>
+        </div>
     </footer>
 
 </body>
