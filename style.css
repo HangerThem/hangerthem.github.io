@@ -8,10 +8,14 @@
     --text-border: #836767;
     --pi-bg1: #463737;
     --pi-bg2: #352626;
+    --fb-clr: #3b5998;
+    --tw-clr: #1DA1F2;
+    --gh-clr: #333;
 }
 
 html {
     height: 100%;
+    
 }
 
 body {
@@ -20,6 +24,10 @@ body {
 
     display: flex;
     flex-direction: column;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul {
@@ -163,17 +171,59 @@ li {
 }
 
 .icons {
+    font-size: 2em;
+    position: relative;
     color: var(--white);
     text-decoration: none;
-    margin: 1em;
+}
+
+.names {
+    font-size: 1em;
+    position: relative;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#fb, #tw, #gh {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
+.fa-facebook-square:hover, .fa-facebook-square:focus {
+    animation: fb 0.2s forwards;
+}
+
+.fa-twitter-square:hover, .fa-twitter-square:focus {
+    animation: tw 0.2s forwards;
+}
+
+.fa-github-square:hover, .fa-github-square:focus {
+    animation: gh 0.2s forwards;
+}
+
 footer {
-    background: var(--primar);
+    background: var(--shadow);
     padding: 2em;
     margin: -1em;
     margin-top: auto;
+}
+
+@keyframes fb {
+    to {color: var(--fb-clr);}
+}
+
+@keyframes tw {
+    to {color: var(--tw-clr);}
+}
+
+@keyframes gh {
+    to {color: var(--gh-clr);}
 }
 
 @keyframes navbar_after {
