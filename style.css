@@ -3,10 +3,23 @@
     --shadow: #7c7c7c;
     --navbar-clr: #363636;
     --white: #fff;
+    --black: #000;
     --pi-border: #331a1a;
     --text-border: #836767;
     --pi-bg1: #463737;
     --pi-bg2: #352626;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
 }
 
 ul {
@@ -37,9 +50,10 @@ li {
     float: left;
   }
   
-li a {
+.navbar {
+    font-size: 1rem;
+    display: inline-block;
     position: relative;
-    display: block;
     color: var(--white);
     text-align: center;
     padding: 14px 16px;
@@ -47,15 +61,34 @@ li a {
     font-family: 'Staatliches', cursive;
 }
 
-li a:hover, li a:focus {
-    animation: navbar 1s forwards;
+.navbar::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    top: 0;
+    bottom: 2.75em;
+    left: 0;
+    right: 0;
+    background: var(--white);
 }
 
-#myDIV {
-    height: 500rem;
+.navbar-dropdown {
+    text-decoration: none;
+    color: var(--white);
+    padding: 14px 16px;
+    display: none;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.navbar:hover::after, .navbar:focus::after {
+    animation: navbar_after 0.5s forwards;
 }
 
 .clock {
+    display: inline-block;
     font-family: 'Staatliches', cursive;
     padding: 14px 16px;
     color: var(--white);
@@ -75,8 +108,8 @@ li a:hover, li a:focus {
 
 #index_button {
     display: grid;
-    height: 100px;
-    width: 200px;
+    height: 2em;
+    width: 4em;
     text-decoration: none;
     font-family: 'Staatliches', cursive;
     font-size: 50px;
@@ -90,8 +123,8 @@ li a:hover, li a:focus {
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-top: -10px;
-    margin-left: -110px;
+    margin-top: -0.2em;
+    margin-left: -2.2em;
 }
 
 #index_button::after {
@@ -111,8 +144,8 @@ li a:hover, li a:focus {
 }
 
 #index_text {
-    height: 105px;
-    width: 580px;
+    height: 2em;
+    width: 36.25em;
     font-size: 55px;
     text-shadow: 0px 5px 2.5px var(--shadow);
     color: var(--white);
@@ -121,21 +154,65 @@ li a:hover, li a:focus {
     font-family: 'Pacifico', cursive;
     width: max-content;
 
-    border-bottom: var(--text-border) 2px dashed;
-    border-top: var(--text-border) 2px dashed;
+    border-block: var(--text-border) 2px dashed;
 
     top: 50%;
     left: 50%;
-    margin-top: -140px;
-    margin-left: -290px;
+    margin-top: -3em;
+    margin-left: -5.25em;
 }
 
-@keyframes navbar {
-    from {background-color: var(--primar);}
-    to {background-color: var(--navbar-clr);}
+.icons {
+    color: var(--white);
+    text-decoration: none;
+    margin: 1em;
+    text-align: center;
+}
+
+footer {
+    background: var(--primar);
+    padding: 2em;
+    margin: -1em;
+    margin-top: auto;
+}
+
+@keyframes navbar_after {
+    from {width: 0%;}
+    to {width: 100%;}
 }
 
 @keyframes index_animation {
     from {width: 0%;}
     to {width: 100%;}
+}
+
+@media only screen and (max-width: 40em) {
+    #index_text {
+        text-align: center;
+        line-height: 1.5;
+        width: 4em;
+        height: 4.5em;
+        top: 50%;
+        left: 50%;
+        margin-top: -5em;
+        margin-left: -2em;
+    }
+}
+
+@media only screen and (max-width: 34rem) and (orientation: portrait) {
+    #navbar-shrink {
+        display: none;
+    }
+
+    .nav-toggle:checked ~ #navbar-shrink {
+        display: grid;
+        justify-items: left;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .navbar-dropdown {
+        display: inline-block;
+    }
 }
