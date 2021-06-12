@@ -6,20 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" async></script>
     <link rel="shortcut icon" href="logo.svg" type="favicon">
-    <title>Welcome</title>
+    <script src="script.js" async></script>
+    <title>Home</title>
 </head>
 <body onload="startTime()">
-    <div id="background"></div>
-    <ul>
+
+    <ul id="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="navbar-dropdown navbar">
+            <span><i class="fa fa-bars"></i></span>
+        </label>
+        <li style="float: right;"><div id="date" class="clock"></div></li>
         <li style="float: right;"><div id="time" class="clock"></div></li>
-        <li style="float: left;"><div id="date" class="clock"></div></li></th>
+        <div id="navbar-shrink">
+            <li><a href="home.html" class="navbar">Home</a></li>
+            <li><a href="news.asp" class="navbar">News</a></li>
+            <li><a href="contact.asp" class="navbar">Contact</a></li>
+            <li><a href="about.asp" class="navbar">About</a></li>
+        </div>
     </ul>
-    <h1 id="index_text">Welcome to my website!</h1>
-    <a href="home.html" id="index_button">ENTER</a>
+
+    <div class="container">
+        <h1>FormSubmit Demo</h1>
+        <form target="_blank" action="https://formsubmit.co/f.borisjuk@gmail.com" method="POST">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                    </div>
+                    <div class="col">
+                        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+        </form>
+    </div>
+
+    <footer>
+        <a href="" class="icons"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="" class="icons"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="" class="icons"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="" class="icons"><i class="fa fa-github" aria-hidden="true"></i></a>
+    </footer>
+
 </body>
 </html>
