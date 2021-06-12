@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.svg" type="favicon">
+    <script src="script.js" async></script>
+    <title>News</title>
+</head>
+<body onload="startTime()">
+
+    <ul id="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="navbar-dropdown navbar">
+            <span><i class="fa fa-bars"></i></span>
+        </label>
+        <li style="float: right;"><div id="date" class="clock"></div></li>
+        <li style="float: right;"><div id="time" class="clock"></div></li>
+        <div id="navbar-shrink">
+            <li><a href="home.html" class="navbar">Home</a></li>
+            <li><a href="news.html" class="navbar">News</a></li>
+            <li><a href="contact.html" class="navbar">Contact</a></li>
+            <li><a href="about.html" class="navbar">About</a></li>
+        </div>
+    </ul>
+
+    <div id="footer">
+        <div class="icons-container">
+            <div id="fb">
+                <a href="" onclick="alertOpen()"><i class="fa fa-facebook-square icons" aria-hidden="true"></i></a>
+                <a href="" onclick="alertOpen()" class="names">Facebook</a>
+            </div>
+            <div id="tw">
+                <a href="" onclick="alertOpen()"><i class="fa fa-twitter-square icons" aria-hidden="true"></i></a>
+                <a href="" onclick="alertOpen()" class="names">Twitter</a>
+            </div>
+            <div id="gh">
+                <a href="https://github.com/HangerThem" target="_blank"><i class="fa fa-github-square icons" aria-hidden="true"></i></a>
+                <a href="https://github.com/HangerThem" target="_blank" class="names">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

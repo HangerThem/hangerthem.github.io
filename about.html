@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.svg" type="favicon">
+    <script src="script.js" async></script>
+    <title>About</title>
+</head>
+<body onload="startTime()">
+
+    <ul id="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="navbar-dropdown navbar">
+            <span><i class="fa fa-bars"></i></span>
+        </label>
+        <li style="float: right;"><div id="date" class="clock"></div></li>
+        <li style="float: right;"><div id="time" class="clock"></div></li>
+        <div id="navbar-shrink">
+            <li><a href="home.html" class="navbar">Home</a></li>
+            <li><a href="news.html" class="navbar">News</a></li>
+            <li><a href="contact.html" class="navbar">Contact</a></li>
+            <li><a href="about.html" class="navbar">About</a></li>
+        </div>
+    </ul>
+    <section id="about">
+        <h1 id="title">About me</h1>
+        <p id="age"></p>
+        <p>I am student of CS degree.</p>
+        <p id="timeSpan"></p>
+        <p>I like games, memes, D&D, and science.</p>
+        <p>My favourite books are: LOTR, The Hobbit and The Silmarillion.</p>
+    </section>
+    <div class="parallax1"></div>
+    <section id="experiences">
+        <h2>Experiences</h2>
+        <p>I'm able to program in HTML, CSS, JS, Java, Python, and a little bit in C++.</p>
+        <p>I have been programming the website for over 6 years.</p>
+        <p>I learned Python and Java 2 years ago.</p>
+        <p>I started learning C++ in early 2021.</p>
+    </section>
+    <div class="parallax2"></div>
+    <section id="projects">
+        <h2>Goals & projects</h2>
+        <p>One of my biggist goals is obviously to complete high school.</p>
+        <p>I want to be a programmer and web developer.</p>
+        <p>The programming languages I want to learn include C, C #, Swift, PHP, and maybe Rust.</p>
+        <p>My projects include game programming, website development, and to improve in all different branches of programming.</p>
+    </section>
+
+    <div id="footer">
+        <div class="icons-container">
+            <div id="fb">
+                <a href="" onclick="alertOpen()"><i class="fa fa-facebook-square icons" aria-hidden="true"></i></a>
+                <a href="" onclick="alertOpen()" class="names">Facebook</a>
+            </div>
+            <div id="tw">
+                <a href="" onclick="alertOpen()"><i class="fa fa-twitter-square icons" aria-hidden="true"></i></a>
+                <a href="" onclick="alertOpen()" class="names">Twitter</a>
+            </div>
+            <div id="gh">
+                <a href="https://github.com/HangerThem" target="_blank"><i class="fa fa-github-square icons" aria-hidden="true"></i></a>
+                <a href="https://github.com/HangerThem" target="_blank" class="names">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
