@@ -24,8 +24,8 @@ function startTime() {
   }
   min = checkTime(min);
   s = checkTime(s);
-  document.getElementById('time').innerHTML = h + ":" + min + ":" + s;
-  document.getElementById('date').innerHTML = n + " " + d + "/" + mon + "/" + y;
+  document.querySelector('[data-time]').innerHTML = h + ":" + min + ":" + s;
+  document.querySelector('[data-date]').innerHTML = n + " " + d + "/" + mon + "/" + y;
   var t = setTimeout(startTime, 1000);
 }
 function checkTime(i) {
