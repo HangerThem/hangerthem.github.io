@@ -98,11 +98,11 @@ li {
 }
 
 .parallax1 {
-    background-image: url("eärendilVsAncalagon.jpeg");
+    background-image: url("../imgs/eärendilVsAncalagon.jpeg");
 }
 
 .parallax2 {
-    background-image: url("programmingLanguages.jpeg");
+    background-image: url("../imgs/programmingLanguages.jpeg");
 }
 
 .parallax1, .parallax2, .parallax3 {
@@ -147,7 +147,7 @@ li {
 }
 
 #background {
-    background-image: url("minas-tirith.jpg");
+    background-image: url("../imgs/minas-tirith.jpg");
     background-position: center;
     margin: -23px;
     background-repeat: no-repeat;
@@ -239,7 +239,7 @@ li {
     text-align: center;
 }
 
-.facebook:hover, .facebook:focus {
+.fb:hover, .fb:focus {
     animation: fb 0.2s forwards;
 }
 
