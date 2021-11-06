@@ -43,7 +43,7 @@ p {
 }
 
 section {
-    margin: 0 1em 0 1em;
+    margin: 0 1em;
 }
 
 #about, #projects {
@@ -80,33 +80,54 @@ ul {
     top: 0;
 }
 
-ul#navbar {
-    list-style-type: none;
-    margin-top: 0;
-    padding: 0;
-    overflow: hidden;
+
+.navbar {
     background-color: var(--primar);
-    position: fixed;
-    z-index: 999;
+    z-index: 3;
+}
+
+.navbar--item {
+    float: left;
+    font-size: 1rem;
+    color: var(--white);
+    padding: 14px 16px;
+    font-family: 'Staatliches', cursive;
+}
+
+.navbar--clock_item {
+    float: right;
+    font-family: 'Staatliches', cursive;
+    padding: 14px 16px;
+    color: var(--white);
+}
+
+
+.navbar--item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    inset: 0;
+    height: 4px;
+    background: var(--white);
+}
+
+.navbar--dropdown {
+    text-decoration: none;
+    color: var(--white);
+    padding: 14px 16px;
+    display: none;
+}
+
+.navbar--toggle {
+    display: none;
+}
+
+.navbar--item:hover::after, .navbar--item:focus::after {
+    animation: navbar_after 0.5s forwards;
 }
   
 li {
     float: left;
-}
-  
-.navbar {
-    font-size: 1rem;
-    display: inline-block;
-    position: relative;
-    color: var(--white);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: 'Staatliches', cursive;
-}
-
-.names {
-    font-family: 'Staatliches', cursive;
 }
 
 .parallax1 {
@@ -123,39 +144,6 @@ li {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.navbar::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    top: 0;
-    bottom: 2.75em;
-    left: 0;
-    right: 0;
-    background: var(--white);
-}
-
-.navbar-dropdown {
-    text-decoration: none;
-    color: var(--white);
-    padding: 14px 16px;
-    display: none;
-}
-
-.nav-toggle {
-    display: none;
-}
-
-.navbar:hover::after, .navbar:focus::after {
-    animation: navbar_after 0.5s forwards;
-}
-
-.clock {
-    display: inline-block;
-    font-family: 'Staatliches', cursive;
-    padding: 14px 16px;
-    color: var(--white);
 }
 
 #background {
@@ -234,6 +222,7 @@ li {
 }
 
 .names {
+    font-family: 'Staatliches', cursive;
     font-size: 1em;
     position: relative;
     color: var(--white);
@@ -271,25 +260,39 @@ li {
 }
 
 @keyframes fb {
-    to {color: var(--fb-clr);}
+    to {
+        color: var(--fb-clr);
+    }
 }
 
 @keyframes tw {
-    to {color: var(--tw-clr);}
+    to {
+        color: var(--tw-clr);
+    }
 }
 
 @keyframes gh {
-    to {color: var(--gh-clr);}
+    to {
+        color: var(--gh-clr);
+    }
 }
 
 @keyframes navbar_after {
-    from {width: 0%;}
-    to {width: 100%;}
+    from {
+        width: 0%;
+    }
+    to {
+        width: 10%;
+    }
 }
 
 @keyframes index_animation {
-    from {width: 0%;}
-    to {width: 100%;}
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 40em) {
@@ -306,11 +309,11 @@ li {
 }
 
 @media only screen and (max-width: 37em) and (orientation: portrait) {
-    #navbar-shrink {
+    .navbar--shrink {
         display: none;
     }
 
-    .nav-toggle:checked ~ #navbar-shrink {
+    .navbar--toggle:checked ~ .navbar--shrink {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -318,12 +321,12 @@ li {
         left: 0;
     }
 
-    .navbar-dropdown {
+    .navbar--dropdown {
         display: inline-block;
     }
 }
 
-@media only screen and (min-width: 37em) and (max-width: 80em) {
+@media only screen and (min-width: 37em) {
     section {
         margin-inline: 10em;
         background: var(--white);

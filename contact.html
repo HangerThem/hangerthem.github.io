@@ -12,21 +12,22 @@
 </head>
 <body onload="startTime()">
 
-    <ul id="navbar">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="navbar-dropdown navbar">
+    <div class="navbar">
+        <input type="checkbox" class="navbar--toggle">
+        <label for="navbar--toggle" class="navbar--dropdown">
             <span><i class="fa fa-bars"></i></span>
         </label>
-        <li style="float: right;"><div id="date" class="clock"></div></li>
-        <li style="float: right;"><div id="time" class="clock"></div></li>
-        <div id="navbar-shrink">
-            <li><a href="home.html" class="navbar">Home</a></li>
-            <li><a href="news.html" class="navbar">News</a></li>
-            <li><a href="contact.html" class="navbar">Contact</a></li>
-            <li><a href="about.html" class="navbar">About</a></li>
+        <div class="navbar--shrink">
+            <a href="home.html" class="navbar--item">Home</a>  
+            <a href="news.html" class="navbar--item">News</a>  
+            <a href="contact.html" class="navbar--item">Contact</a>
+            <a href="about.html" class="navbar--item">About</a>
         </div>
-    </ul>iv>
-    </ul>
+        <div class="navbar--clock">
+            <div data-date class="navbar--clock_item"></div>
+            <div data-time class="navbar--clock_item"></div>
+        </div>
+    </div>
 
     <section id="contact">
         <h1 id="title">Contact me</h1>
