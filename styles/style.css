@@ -76,8 +76,7 @@ ul {
     inset: 0;
 }
 
-
-
+/*Navbar*/
 .navbar {
     position: fixed;
     width: 100vw;
@@ -87,6 +86,14 @@ ul {
 
 .navbar--shrink {
     display: inline;
+}
+
+.navbar--clock_item {
+    float: left;
+    float: right;
+    font-family: 'Staatliches', cursive;
+    padding: 14px 16px;
+    color: var(--white);
 }
 
 .navbar--item {
@@ -99,19 +106,6 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
     font-family: 'Staatliches', cursive;
-}
-
-.navbar--clock_item {
-    float: left;
-    float: right;
-    font-family: 'Staatliches', cursive;
-    padding: 14px 16px;
-    color: var(--white);
-}
-
-.navbar--bars {
-    color: var(--white);
-    display: none;
 }
 
 .navbar--item::after {
@@ -127,6 +121,50 @@ ul {
 
 .navbar--item:hover::after, .navbar--item:focus::after {
     animation: navbar_after 0.5s forwards;
+}
+
+/*Burger menu dropdown button*/
+.navbar--burger {
+    display: none;
+}
+
+.navbar--burger__button {
+    width: 25px;
+    height: 3px;
+    background-color: #FFF;
+    border-radius: 2.5px;
+    transition: all 0.25s ease-in-out;
+}
+
+.navbar--burger__button::before, .navbar--burger__button::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #FFF;
+    border-radius: 2.5px;
+    transition: all 0.25s ease-in-out;
+}
+
+.navbar--burger__button::before {
+    transform: translateY(-8px);
+}
+
+.navbar--burger__button::after {
+    transform: translateY(8px);
+}
+
+.menu-btn.open .navbar--burger__button {
+    transform: translate(-25px);
+    background-color: transparent;
+}
+
+.menu-btn.open .navbar--burger__button::before {
+    transform: rotate(45deg) translate(17.5px, -17.5px);
+}
+
+.menu-btn.open .navbar--burger__button::after {
+    transform: rotate(-45deg) translate(17.5px, 17.5px);
 }
 
 
@@ -207,21 +245,21 @@ li {
     justify-content: space-evenly;
 }
 
-#fb, #tw, #gh {
+.facebook, .twitter, .github {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.facebook:hover, .facebook:focus {
+.facebook:hover *, .facebook:focus * {
     animation: fb 0.2s forwards;
 }
 
-.twitter:hover, .twitter:focus {
+.twitter:hover *, .twitter:focus * {
     animation: tw 0.2s forwards;
 }
 
-.github:hover, .github:focus {
+.github:hover *, .github:focus * {
     animation: gh 0.2s forwards;
 }
 
@@ -262,11 +300,16 @@ li {
 }
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
-    .navbar--bars {
-        padding: 14px 16px;
-        width: fit-content;
-        font-size: 1rem;
-        display: block;
+    .navbar--burger {
+        padding: 4px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
     }
 
     .navbar--item:hover::after, .navbar--item:focus::after {

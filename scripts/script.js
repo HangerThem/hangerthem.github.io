@@ -45,19 +45,21 @@ function alertOpen() {
   alert('Sorry, I don\'t want to link my poor social media here.')
 }
 
-function navbar() {
-  const navbar = document.querySelector('[data-navbar]')
-  const navIcon = document.querySelector('[data-icon]')
+//Nabvar dropdown
+const menuBtn = document.querySelector('[data-burger]')
+const navbar = document.querySelector('[data-navbar]')
+let menuOpen = false
 
-  if (navbar.style.display === 'flex') {
-    navbar.style.display = 'none'
-    navIcon.classList.remove("fa-times")
-    navIcon.classList.add("fa-bars")
-  }
-  else {
+menuBtn.addEventListener('click', () => {
+  if (!menuOpen) {
+    menuBtn.classList.add('open')
     navbar.style.display = 'flex'
     navbar.style.flexDirection = 'column'
-    navIcon.classList.remove("fa-bars")
-    navIcon.classList.add("fa-times")
+    menuOpen = true
   }
-}
+  else {
+    menuBtn.classList.remove('open')
+    navbar.style.display = 'none'
+    menuOpen = false
+  }
+})
