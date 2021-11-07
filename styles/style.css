@@ -1,21 +1,23 @@
+/*Imports*/
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
+/*Colors*/
 :root {
-    --primar: #000;
-    --shadow: #7c7c7c;
-    --white: #fff;
-    --black: #000;
-    --pi-border: #7c7c7c;
-    --text-border: #a0a0a0;
-    --pi-bg1: rgb(32, 32, 32);
-    --pi-bg2: #000;
-    --fb-clr: #3b5998;
-    --tw-clr: #1DA1F2;
-    --gh-clr: #333;
-    --index-clr: #444;
     --bg1-clr: #575757;
     --bg2-clr: #757373;
+    --black: #000;
+    --fb-clr: #3b5998;
+    --gh-clr: #333;
+    --index-clr: #444;
+    --pi-bg1: rgb(32, 32, 32);
+    --pi-bg2: #000;
+    --pi-border: #7c7c7c;
+    --primar: #000;
+    --shadow: #7c7c7c;
+    --text-border: #a0a0a0;
+    --tw-clr: #1DA1F2;
+    --white: #fff;
 }
 
 /*Generic setting*/
@@ -24,28 +26,36 @@
 }
 
 body {
-    min-height: 100vh;
-    min-width: 100vw;
-    margin: 0;
-
     display: flex;
     flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 p {
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 
+a {
+    word-spacing: 5px;
+    text-decoration: none;
+}
+
+i {
+    color: var(--white);
+}
+
 /*Nonspecific*/
 .left-text {
     display: block;
-    text-align: left;
     padding-inline: 20px;
+    text-align: left;
 }
 
 .right-text {
     display: block;
-    text-align: right;
     padding-inline: 20px;
+    text-align: right;
 }
 
 .title {
@@ -60,39 +70,30 @@ p {
     z-index: 3;
 }
 
-.navbar--shrink {
-    display: inline;
-}
-
 .navbar--clock_item {
-    float: left;
+    padding: 14px 16px;
     float: right;
     font-family: 'Staatliches', cursive;
-    padding: 14px 16px;
     color: var(--white);
 }
 
 .navbar--item {
-    width: fit-content;
-    font-size: 1rem;
     display: inline-block;
     position: relative;
-    color: var(--white);
-    text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    width: fit-content;
+    text-align: center;
     font-family: 'Staatliches', cursive;
+    font-size: 1rem;
+    color: var(--white);
 }
 
 .navbar--item::after {
-    content: '';
     position: absolute;
-    width: 0%;
-    top: 0;
-    bottom: 2.5em;
-    left: 0;
-    right: 0;
+    width: 0;
+    inset: 0 0 40px 0;
     background: var(--white);
+    content: '';
 }
 
 .navbar--item:hover::after, .navbar--item:focus::after {
@@ -113,13 +114,13 @@ p {
 }
 
 .navbar--burger__button::before, .navbar--burger__button::after {
-    content: '';
     position: absolute;
     width: 25px;
     height: 3px;
     background-color: #FFF;
     border-radius: 2.5px;
     transition: all 0.25s ease-in-out;
+    content: '';
 }
 
 .navbar--burger__button::before {
@@ -162,8 +163,8 @@ p {
 
 /*Index page*/
 .index--main {
-    text-align: center;
     margin: auto;
+    text-align: center;
 }
 
 .index--clock {
@@ -172,21 +173,21 @@ p {
 }
 
 .index--text {
+    font-family: 'Staatliches', sans-serif;
     font-size: 5rem;
     color: var(--white);
     letter-spacing: 5px;
-    font-family: 'Staatliches', sans-serif;
 }
 
 .index--button {
+    padding: 10px;
     width: fit-content;
     height: fit-content;
-    padding: 10px;
     font-family: 'Staatliches', cursive;
     font-size: 4rem;
-    border: var(--pi-border) 10px solid;
-    background-color: var(--pi-bg2);
     color: var(--white);
+    background-color: var(--pi-bg2);
+    border: var(--pi-border) 10px solid;
 }
 
 .index--button:hover, .index--button:focus {
@@ -195,9 +196,9 @@ p {
 
 /*Footer*/
 .footer {
-    background: var(--primar);
     padding: 20px;
     font-family: 'Staatliches', cursive;  
+    background: var(--primar);
 }
 
 .footer--icons {
@@ -206,24 +207,23 @@ p {
 }
 
 .icon {
-    font-size: 2em;
     position: relative;
+    font-size: 2em;
     color: var(--white);
-    text-decoration: none;
 }
 
 .icon-names {
+    position: relative;
     font-family: 'Staatliches', cursive;
     font-size: 1em;
-    position: relative;
     color: var(--white);
-    text-decoration: none;
 }
 
 .facebook, .twitter, .github {
     display: flex;
     flex-direction: column;
     text-align: center;
+    cursor: pointer;
 }
 
 .facebook:hover *, .facebook:focus * {
@@ -272,15 +272,15 @@ p {
 /*Responsivitzy*/
 @media only screen and (max-width: 600px) and (orientation: portrait) {
     .navbar--burger {
-        padding: 4px;
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 4px;
+        position: relative;
         width: 40px;
         height: 40px;
-        cursor: pointer;
         transition: all 0.5s ease-in-out;
+        cursor: pointer;
     }
 
     .navbar--item:hover::after, .navbar--item:focus::after {
@@ -299,8 +299,8 @@ p {
 @media only screen and (min-width: 825px) {
     section {
         margin-inline: 100px;
-        background: var(--white);
         padding-inline: 10px;
+        background: var(--white);
     }
 
     .navbar--shrink {
@@ -319,7 +319,7 @@ p {
 @media only screen and (min-width: 1020px) {
     section {
         margin-inline: 200px;
-        padding-inline: 10px;
+        padding-inline: 20px;
         background-color: var(--white);
     }
     
