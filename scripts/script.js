@@ -60,5 +60,4 @@ function navbar() {
     navIcon.classList.remove("fa-bars")
     navIcon.classList.add("fa-times")
   }
-
 }

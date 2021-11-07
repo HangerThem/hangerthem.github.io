@@ -79,7 +79,8 @@ ul {
 
 
 .navbar {
-    display: block;
+    position: fixed;
+    width: 100vw;
     background-color: var(--primar);
     z-index: 3;
 }
@@ -89,10 +90,14 @@ ul {
 }
 
 .navbar--item {
-    float: left;
+    width: fit-content;
     font-size: 1rem;
+    display: inline-block;
+    position: relative;
     color: var(--white);
+    text-align: center;
     padding: 14px 16px;
+    text-decoration: none;
     font-family: 'Staatliches', cursive;
 }
 
@@ -112,9 +117,11 @@ ul {
 .navbar--item::after {
     content: '';
     position: absolute;
-    width: 0;
-    inset: 0;
-    height: 4px;
+    width: 0%;
+    top: 0;
+    bottom: 2.5em;
+    left: 0;
+    right: 0;
     background: var(--white);
 }
 
@@ -128,20 +135,20 @@ li {
     float: left;
 }
 
-.parallax1 {
-    background-image: url("../imgs/eärendilVsAncalagon.jpeg");
-}
-
-.parallax2 {
-    background-image: url("../imgs/programmingLanguages.jpeg");
-}
-
 .parallax1, .parallax2 {
     min-height: 17em;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.parallax1 {
+    background-image: url("../imgs/eärendilVsAncalagon.jpeg");
+}
+
+.parallax2 {
+    background-image: url("../imgs/programmingLanguages.jpeg");
 }
 
 
@@ -244,7 +251,7 @@ li {
 
 @keyframes navbar_after {
     100%{
-        width: 10%;
+        width: 100%;
     }
 }
 
@@ -260,6 +267,10 @@ li {
         width: fit-content;
         font-size: 1rem;
         display: block;
+    }
+
+    .navbar--item:hover::after, .navbar--item:focus::after {
+        animation: none;
     }
 
     .navbar--shrink {
