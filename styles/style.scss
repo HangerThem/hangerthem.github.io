@@ -24,11 +24,10 @@
 
 
 body {
-    min-height: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
     margin: 0;
-    z-index: -1;
 
-    background-color: var(--index-clr);
     display: flex;
     flex-direction: column;
 }
@@ -214,11 +213,10 @@ li {
     animation: gh 0.2s forwards;
 }
 
-#footer {
+.footer {
     background: var(--primar);
-    padding: 1.5em;
-    margin-top: auto;
-    font-family: 'Staatliches', cursive;
+    padding: 20px;
+    font-family: 'Staatliches', cursive;  
 }
 
 @keyframes fb {
@@ -261,7 +259,7 @@ li {
         display: none;
     }
 
-    body {
+    section {
         background-color: var(--white);
     }
 }
@@ -285,6 +283,7 @@ li {
     section {
         margin-inline: 200px;
         padding-inline: 10px;
+        background-color: var(--white);
     }
 
     .parallax1, .parallax2, .parallax3 {
