@@ -44,3 +44,10 @@ function startTime() {
 function alertOpen() {
   alert('Sorry, I don\'t want to link my poor social media here.')
 }
+
+function navbar() {
+  const navbar = document.querySelector('[data-navbar]')
+
+  if (navbar.style.display === 'flex') navbar.style.display = 'none'
+  else navbar.style.display = 'flex'
+}

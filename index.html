@@ -12,12 +12,13 @@
     <title>Welcome</title>
 </head>
 <body onload="startTime()">
-    <div id="background"></div>
-    <ul>
-        <li style="float: right;"><div id="time" class="clock"></div></li>
-        <li style="float: left;"><div id="date" class="clock"></div></li></th>
-    </ul>
-    <h1 id="index_text">Welcome to my website!</h1>
-    <a href="home.html" id="index_button">ENTER</a>
+    <header class="index--clock">
+        <div data-time class="navbar--clock_item"></div>
+        <div data-date class="navbar--clock_item"></div>
+    </header>
+    <main class="index--main">
+        <h1 class="index--text">Welcome!</h1>
+        <a href="home.html" class="index--button">ENTER</a>
+    </main>
 </body>
 </html>

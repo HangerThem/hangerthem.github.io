@@ -13,11 +13,8 @@
 <body onload="startTime()">
 
     <div class="navbar">
-        <input type="checkbox" class="navbar--toggle">
-        <label for="navbar--toggle" class="navbar--dropdown">
-            <span><i class="fa fa-bars"></i></span>
-        </label>
-        <div class="navbar--shrink">
+        <i class="fa fa-bars navbar--bars" onclick="navbar()"></i>
+        <div data-navbar class="navbar--shrink">
             <a href="home.html" class="navbar--item">Home</a>  
             <a href="news.html" class="navbar--item">News</a>  
             <a href="contact.html" class="navbar--item">Contact</a>
