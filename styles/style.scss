@@ -71,13 +71,11 @@ a {
 
 ul {
     list-style-type: none;
-    margin-top: 0;
+    margin: 0;
     padding: 0;
     overflow: hidden;
     position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
+    inset: 0;
 }
 
 
@@ -295,7 +293,8 @@ li {
     }
 }
 
-@media only screen and (max-width: 40em) {
+
+@media only screen and (max-width: 600px) {
     #index_text {
         text-align: center;
         line-height: 1.5;
@@ -308,7 +307,7 @@ li {
     }
 }
 
-@media only screen and (max-width: 37em) and (orientation: portrait) {
+@media only screen and (max-width: 600px) and (orientation: portrait) {
     .navbar--shrink {
         display: none;
     }
@@ -326,15 +325,15 @@ li {
     }
 }
 
-@media only screen and (min-width: 37em) {
+@media only screen and (min-width: 825px) {
     section {
-        margin-inline: 10em;
+        margin-inline: 100px;
         background: var(--white);
-        padding-inline: 1em;
+        padding-inline: 10px;
     }
 
     .parallax1, .parallax2, .parallax3 {
-        margin-inline: 10em;
+        margin-inline: 100px;
     }
 
     body {
@@ -342,18 +341,13 @@ li {
     }
 }
 
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 1020px) {
     section {
-        margin-inline: 25em;
-        background: var(--white);
-        padding-inline: 2em;
+        margin-inline: 200px;
+        padding-inline: 10px;
     }
 
     .parallax1, .parallax2, .parallax3 {
-        margin-inline: 25em;
-    }
-
-    body {
-        background: var(--bg1-clr);;
+        margin-inline: 200px;
     }
 }

@@ -1,38 +1,46 @@
 function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var min = today.getMinutes();
-  var n = today.getUTCDay();
-  var s = today.getSeconds();
-  var d = today.getDate();
-  var mon = today.getMonth();
-  var y = today.getFullYear();
-  if(n == 1) {
-    n = "MON";
-  } else if(n == 2)  {
-    n = "TUE";
-  } else if(n == 3)  {
-    n = "WED";
-  } else if(n == 4)  {
-    n = "THU";
-  } else if(n == 5)  {
-    n = "FRI";
-  } else if(n == 6)  {
-    n = "SAT";
-  } else if(n == 7)  {
-    n = "SUN";
+  setTimeout(startTime, 1000)
+
+  const today = new Date();
+
+  var numberOfDay = today.getUTCDay()
+  var year = today.getFullYear()
+  var month = today.getMonth()
+  var day = today.getDate()
+  var hours = today.getHours()
+  var minutes = today.getMinutes()
+  var seconds = today.getSeconds()
+
+  function dayName(day) {
+    switch (day) {
+      case 0:
+        return 'SUN'
+      case 1:
+        return 'MON'
+      case 2:
+        return 'TUE'
+      case 3:
+        return 'WED'
+      case 4:
+        return 'THR'
+      case 5:
+        return 'FRI'
+      case 6:
+        return 'SAT'
+      default:
+        return ''
+    }
   }
-  min = checkTime(min);
-  s = checkTime(s);
-  document.querySelector('[data-time]').innerHTML = h + ":" + min + ":" + s;
-  document.querySelector('[data-date]').innerHTML = n + " " + d + "/" + mon + "/" + y;
-  var t = setTimeout(startTime, 1000);
-}
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};
-  return i;
+
+  function zeroAdder(subject) {
+    if (subject < 10) return `0${subject}`
+    return subject
+  }
+
+  document.querySelector('[data-time]').innerHTML = `${hours}:${zeroAdder(minutes)}:${zeroAdder(seconds)}`
+  document.querySelector('[data-date]').innerHTML = `${dayName(numberOfDay)} ${day} / ${month} / ${year}`
 }
 
 function alertOpen() {
-  alert("Sorry, I don't want to link my poor social media here.");
+  alert('Sorry, I don\'t want to link my poor social media here.')
 }
