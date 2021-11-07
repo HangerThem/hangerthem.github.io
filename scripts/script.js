@@ -1,3 +1,4 @@
+//Clock
 function startTime() {
   setTimeout(startTime, 1000)
 
@@ -11,6 +12,7 @@ function startTime() {
   var minutes = today.getMinutes()
   var seconds = today.getSeconds()
 
+  //Choose name of day
   function dayName(day) {
     switch (day) {
       case 0:
@@ -32,6 +34,7 @@ function startTime() {
     }
   }
 
+  //Make time more uniform
   function zeroAdder(subject) {
     if (subject < 10) return `0${subject}`
     return subject
@@ -41,6 +44,7 @@ function startTime() {
   document.querySelector('[data-date]').innerHTML = `${dayName(numberOfDay)} ${day} / ${month} / ${year}`
 }
 
+//Social meadia alert
 function alertOpen() {
   alert('Sorry, I don\'t want to link my poor social media here.')
 }

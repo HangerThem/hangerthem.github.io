@@ -18,10 +18,10 @@
     --bg2-clr: #757373;
 }
 
+/*Generic setting*/
 * {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Staatliches', Georgia, Times, serif;
 }
-
 
 body {
     min-height: 100vh;
@@ -31,49 +31,25 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-h1, h2, h3 {
-    font-family: 'Staatliches', cursive;
-}
-
 p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 
-section {
-    margin: 0 1em;
-}
-
-#about, #projects {
+/*Nonspecific*/
+.left-text {
     display: block;
     text-align: left;
+    padding-inline: 20px;
 }
 
-#experiences {
+.right-text {
     display: block;
     text-align: right;
+    padding-inline: 20px;
 }
 
-#title {
+.title {
     margin: 2.5em 0 0 0;
-}
-
-.form-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: fixed;
-    inset: 0;
 }
 
 /*Navbar*/
@@ -167,12 +143,7 @@ ul {
     transform: rotate(-45deg) translate(17.5px, 17.5px);
 }
 
-
-  
-li {
-    float: left;
-}
-
+/*Parallax effect*/
 .parallax1, .parallax2 {
     min-height: 17em;
     background-attachment: fixed;
@@ -189,16 +160,22 @@ li {
     background-image: url("../imgs/programmingLanguages.jpeg");
 }
 
-
+/*Index page*/
+.index--main {
+    text-align: center;
+    margin: auto;
+}
 
 .index--clock {
     display: flex;
     justify-content: space-between;
 }
 
-.index--main {
-    text-align: center;
-    margin: auto;
+.index--text {
+    font-size: 5rem;
+    color: var(--white);
+    letter-spacing: 5px;
+    font-family: 'Staatliches', sans-serif;
 }
 
 .index--button {
@@ -216,33 +193,31 @@ li {
     animation: index_animation 0.5s forwards;
 }
 
-.index--text {
-    font-size: 5rem;
-    color: var(--white);
-    letter-spacing: 5px;
-    font-family: 'Staatliches', sans-serif;
+/*Footer*/
+.footer {
+    background: var(--primar);
+    padding: 20px;
+    font-family: 'Staatliches', cursive;  
 }
 
+.footer--icons {
+    display: flex;
+    justify-content: space-evenly;
+}
 
-
-.icons {
+.icon {
     font-size: 2em;
     position: relative;
     color: var(--white);
     text-decoration: none;
 }
 
-.names {
+.icon-names {
     font-family: 'Staatliches', cursive;
     font-size: 1em;
     position: relative;
     color: var(--white);
     text-decoration: none;
-}
-
-.icons-container {
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .facebook, .twitter, .github {
@@ -263,12 +238,7 @@ li {
     animation: gh 0.2s forwards;
 }
 
-.footer {
-    background: var(--primar);
-    padding: 20px;
-    font-family: 'Staatliches', cursive;  
-}
-
+/*Animations*/
 @keyframes fb {
     100%{
         color: var(--fb-clr);
@@ -299,6 +269,7 @@ li {
     }
 }
 
+/*Responsivitzy*/
 @media only screen and (max-width: 600px) and (orientation: portrait) {
     .navbar--burger {
         padding: 4px;
@@ -332,6 +303,10 @@ li {
         padding-inline: 10px;
     }
 
+    .navbar--shrink {
+        display: inline;
+    }
+
     .parallax1, .parallax2, .parallax3 {
         margin-inline: 100px;
     }
@@ -346,6 +321,10 @@ li {
         margin-inline: 200px;
         padding-inline: 10px;
         background-color: var(--white);
+    }
+    
+    .navbar--shrink {
+        display: inline;
     }
 
     .parallax1, .parallax2, .parallax3 {

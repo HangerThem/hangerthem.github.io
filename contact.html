@@ -17,7 +17,9 @@
             <div data-date class="navbar--clock_item"></div>
             <div data-time class="navbar--clock_item"></div>
         </div>
-        <i data-icon class="fa fa-bars navbar--bars" onclick="navbar()"></i>
+        <div data-burger class="navbar--burger">
+            <div class="navbar--burger__button"></div>
+        </div>
         <div data-navbar class="navbar--shrink">
             <a href="home.html" class="navbar--item">Home</a>  
             <a href="news.html" class="navbar--item">News</a>  
@@ -26,28 +28,19 @@
         </div>
     </navbar>
 
-    <section id="contact">
-        <h1 id="title">Contact me</h1>
-        <p id="age"></p>
-        <p>I am student of CS degree.</p>
-        <p id="timeSpan"></p>
-        <p>I like games, memes, D&D, and science.</p>
-        <p>My favourite books are: LOTR, The Hobbit and The Silmarillion.</p>
-    </section>
-
     <footer class="footer">
-        <div class="icons-container">
-            <div id="fb">
-                <a href="" onclick="alertOpen()"><i class="fa fa-facebook-square icons" aria-hidden="true"></i></a>
-                <a href="" onclick="alertOpen()" class="names">Facebook</a>
+        <div class="footer--icons">
+            <div class="facebook" onclick="alertOpen()">
+                <a><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
+                <a class="icon-names">Facebook</a>
             </div>
-            <div id="tw">
-                <a href="" onclick="alertOpen()"><i class="fa fa-twitter-square icons" aria-hidden="true"></i></a>
-                <a href="" onclick="alertOpen()" class="names">Twitter</a>
+            <div class="twitter" onclick="alertOpen()">
+                <a><i class="fa fa-twitter-square icon" aria-hidden="true"></i></a>
+                <a class="icon-names">Twitter</a>
             </div>
-            <div id="gh">
-                <a href="https://github.com/HangerThem" target="_blank"><i class="fa fa-github-square icons" aria-hidden="true"></i></a>
-                <a href="https://github.com/HangerThem" target="_blank" class="names">GitHub</a>
+            <div class="github">
+                <a href="https://github.com/HangerThem" rel="noopener noreferrer" target="_blank"><i class="fa fa-github-square icon" aria-hidden="true"></i></a>
+                <a href="https://github.com/HangerThem" rel="noopener noreferrer" target="_blank" class="icon-names">GitHub</a>
             </div>
         </div>
     </footer>
