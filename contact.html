@@ -12,19 +12,19 @@
 </head>
 <body onload="startTime()">
     
-    <div class="navbar">
-        <i class="fa fa-bars navbar--bars" onclick="navbar()"></i>
+    <navbar class="navbar">
+        <div class="navbar--clock">
+            <div data-date class="navbar--clock_item"></div>
+            <div data-time class="navbar--clock_item"></div>
+        </div>
+        <i data-icon class="fa fa-bars navbar--bars" onclick="navbar()"></i>
         <div data-navbar class="navbar--shrink">
             <a href="home.html" class="navbar--item">Home</a>  
             <a href="news.html" class="navbar--item">News</a>  
             <a href="contact.html" class="navbar--item">Contact</a>
             <a href="about.html" class="navbar--item">About</a>
         </div>
-        <div class="navbar--clock">
-            <div data-date class="navbar--clock_item"></div>
-            <div data-time class="navbar--clock_item"></div>
-        </div>
-    </div>
+    </navbar>
 
     <section id="contact">
         <h1 id="title">Contact me</h1>

@@ -79,8 +79,13 @@ ul {
 
 
 .navbar {
+    display: block;
     background-color: var(--primar);
     z-index: 3;
+}
+
+.navbar--shrink {
+    display: inline;
 }
 
 .navbar--item {
@@ -131,7 +136,7 @@ li {
     background-image: url("../imgs/programmingLanguages.jpeg");
 }
 
-.parallax1, .parallax2, .parallax3 {
+.parallax1, .parallax2 {
     min-height: 17em;
     background-attachment: fixed;
     background-position: center;
@@ -251,7 +256,9 @@ li {
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
     .navbar--bars {
-        color: var(--white);
+        padding: 14px 16px;
+        width: fit-content;
+        font-size: 1rem;
         display: block;
     }
 
@@ -266,6 +273,7 @@ li {
 
 @media only screen and (min-width: 825px) {
     section {
+        margin-inline: 100px;
         background: var(--white);
         padding-inline: 10px;
     }

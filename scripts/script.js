@@ -47,7 +47,18 @@ function alertOpen() {
 
 function navbar() {
   const navbar = document.querySelector('[data-navbar]')
+  const navIcon = document.querySelector('[data-icon]')
 
-  if (navbar.style.display === 'flex') navbar.style.display = 'none'
-  else navbar.style.display = 'flex'
+  if (navbar.style.display === 'flex') {
+    navbar.style.display = 'none'
+    navIcon.classList.remove("fa-times")
+    navIcon.classList.add("fa-bars")
+  }
+  else {
+    navbar.style.display = 'flex'
+    navbar.style.flexDirection = 'column'
+    navIcon.classList.remove("fa-bars")
+    navIcon.classList.add("fa-times")
+  }
+
 }
