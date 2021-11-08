@@ -52,6 +52,7 @@ function alertOpen() {
 //Nabvar dropdown
 const menuBtn = document.querySelector('[data-burger]')
 const navbar = document.querySelector('[data-navbar]')
+const cutter = document.querySelector('[data-cutter]')
 let menuOpen = false
 
 menuBtn.addEventListener('click', () => {
@@ -59,11 +60,13 @@ menuBtn.addEventListener('click', () => {
     menuBtn.classList.add('open')
     navbar.style.display = 'flex'
     navbar.style.flexDirection = 'column'
+    cutter.style.display = 'block'
     menuOpen = true
   }
   else {
     menuBtn.classList.remove('open')
     navbar.style.display = 'none'
+    cutter.style.display = 'none'
     menuOpen = false
   }
 })

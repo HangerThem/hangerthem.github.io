@@ -77,6 +77,10 @@ i {
     color: var(--white);
 }
 
+.navbar--cutter {
+    display: none;
+}
+
 .navbar--item {
     display: inline-block;
     position: relative;
@@ -131,16 +135,16 @@ i {
     transform: translateY(8px);
 }
 
-.menu-btn.open .navbar--burger__button {
+.navbar--burger.open .navbar--burger__button {
     transform: translate(-25px);
     background-color: transparent;
 }
 
-.menu-btn.open .navbar--burger__button::before {
+.navbar--burger.open .navbar--burger__button::before {
     transform: rotate(45deg) translate(17.5px, -17.5px);
 }
 
-.menu-btn.open .navbar--burger__button::after {
+.navbar--burger.open .navbar--burger__button::after {
     transform: rotate(-45deg) translate(17.5px, 17.5px);
 }
 
