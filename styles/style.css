@@ -115,7 +115,7 @@ i {
 .navbar--item::after {
     position: absolute;
     width: 0;
-    inset: 0 0 40px 0;
+    inset: 0 0 42.5px 0;
     background: var(--white);
     content: '';
 }
