@@ -6,23 +6,23 @@
 :root {
     --bg1-clr: #575757;
     --bg2-clr: #757373;
-    --black: #000;
-    --fb-clr: #3b5998;
+    --fb-clr: #3B5998;
     --gh-clr: #333;
     --index-clr: #444;
-    --pi-bg1: rgb(32, 32, 32);
+    --pi-bg1: #202020;
     --pi-bg2: #000;
-    --pi-border: #7c7c7c;
+    --pi-border: #7C7C7C;
     --primar: #000;
-    --shadow: #7c7c7c;
+    --shadow: #7C7C7C;
     --text-border: #a0a0a0;
     --tw-clr: #1DA1F2;
-    --white: #fff;
+    --white: #FFF;
 }
 
 /*Generic setting*/
 * {
     font-family: 'Staatliches', Georgia, Times, serif;
+    color: var(--white);
 }
 
 body {
@@ -34,6 +34,7 @@ body {
 }
 p {
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    color: var(--primar);
 }
 
 a {
@@ -58,8 +59,18 @@ i {
     text-align: right;
 }
 
-.title {
+.title1 {
     margin: 2.5em 0 0 0;
+    color: var(--primar);
+}
+
+.title2 {
+    color: var(--primar);
+}
+
+.mode {
+    padding: 14px 16px;
+    cursor: pointer;
 }
 
 /*Navbar*/
@@ -70,11 +81,20 @@ i {
     z-index: 3;
 }
 
+.navbar--clock {
+    display: inline;
+    float: right;
+}
+
 .navbar--clock_item {
     padding: 14px 16px;
     float: right;
     font-family: 'Staatliches', cursive;
     color: var(--white);
+}
+
+.navbar--time {
+    width: 35px;
 }
 
 .navbar--cutter {
@@ -294,9 +314,21 @@ i {
     .navbar--shrink {
         display: none;
     }
+}
 
+@media only screen and (min-width: 600px) {
     section {
-        background-color: var(--white);
+        margin-inline: 50px;
+        padding-inline: 5px;
+        background: var(--white);
+    }
+
+    .parallax1, .parallax2, .parallax3 {
+        margin-inline: 50px;
+    }
+
+    body {
+        background: var(--bg1-clr);;
     }
 }
 
@@ -307,12 +339,12 @@ i {
         background: var(--white);
     }
 
-    .navbar--shrink {
-        display: inline;
-    }
-
     .parallax1, .parallax2, .parallax3 {
         margin-inline: 100px;
+    }
+
+    .navbar--shrink {
+        display: inline;
     }
 
     body {

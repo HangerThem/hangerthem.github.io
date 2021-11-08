@@ -50,23 +50,41 @@ function alertOpen() {
 }
 
 //Nabvar dropdown
-const menuBtn = document.querySelector('[data-burger]')
+const burgerButton = document.querySelector('[data-burger]')
 const navbar = document.querySelector('[data-navbar]')
 const cutter = document.querySelector('[data-cutter]')
-let menuOpen = false
+let burgerOpen = false
 
-menuBtn.addEventListener('click', () => {
-  if (!menuOpen) {
-    menuBtn.classList.add('open')
+burgerButton.addEventListener('click', () => {
+  if (!burgerOpen) {
+    burgerButton.classList.add('open')
     navbar.style.display = 'flex'
     navbar.style.flexDirection = 'column'
     cutter.style.display = 'block'
-    menuOpen = true
+    burgerOpen = true
   }
   else {
-    menuBtn.classList.remove('open')
+    burgerButton.classList.remove('open')
     navbar.style.display = 'none'
     cutter.style.display = 'none'
-    menuOpen = false
+    burgerOpen = false
+  }
+})
+
+//Dark/Light mode
+const switchButton = document.querySelector('[data-mode]')
+const root = document.documentElement
+let lightMode = false
+
+switchButton.addEventListener('click', () => {
+  if (!lightMode) {
+    root.style.setProperty('--primar', '#FFF')
+    root.style.setProperty('--white', '#000')
+    lightMode = true
+  }
+  else {
+    root.style.setProperty('--primar', '#000')
+    root.style.setProperty('--white', '#FFF')
+    lightMode = false
   }
 })
