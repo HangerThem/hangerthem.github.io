@@ -3,6 +3,9 @@ function startTime() {
   setTimeout(startTime, 1000)
 
   const today = new Date();
+  const timeFormater = new Intl.NumberFormat('en-us', {
+    minimumIntegerDigits: 2
+  })
 
   var numberOfDay = today.getUTCDay()
   var year = today.getFullYear()
@@ -34,13 +37,7 @@ function startTime() {
     }
   }
 
-  //Make time more uniform
-  function zeroAdder(subject) {
-    if (subject < 10) return `0${subject}`
-    return subject
-  }
-
-  document.querySelector('[data-time]').innerHTML = `${hours}:${zeroAdder(minutes)}:${zeroAdder(seconds)}`
+  document.querySelector('[data-time]').innerHTML = `${hours}:${timeFormater.format(minutes)}:${timeFormater.format(seconds)}`
   document.querySelector('[data-date]').innerHTML = `${dayName(numberOfDay)} ${day} / ${month} / ${year}`
 }
 
