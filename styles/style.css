@@ -114,16 +114,18 @@ i {
 
 .navbar--item::after {
     position: absolute;
-    width: 0;
-    transition: all 0.5s ease-in;
-    inset: 0 0 42.5px 0;
+    inset: 0;
+    top: -10%;
+    bottom: 100%;
+    border-radius: 35%;
     background: var(--white);
     content: '';
+    transition: all 125ms ease-in;
 }
 
 .navbar--item:hover::after,
 .navbar--item:focus::after {
-    width: 100%;
+    bottom: 80%;
 }
 
 /*Burger menu*/
@@ -255,12 +257,6 @@ i {
     flex-direction: column;
     text-align: center;
     cursor: pointer;
-}
-
-.facebook,
-.twitter,
-.github {
-    transition: all;
 }
 
 .facebook:hover *,
