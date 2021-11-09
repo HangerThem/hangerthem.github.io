@@ -115,16 +115,18 @@ i {
 .navbar--item::after {
     position: absolute;
     width: 0;
+    transition: all 0.5s ease-in;
     inset: 0 0 42.5px 0;
     background: var(--white);
     content: '';
 }
 
-.navbar--item:hover::after, .navbar--item:focus::after {
-    animation: navbar_after 0.5s forwards;
+.navbar--item:hover::after,
+.navbar--item:focus::after {
+    width: 100%;
 }
 
-/*Burger menu dropdown button*/
+/*Burger menu*/
 .navbar--burger {
     display: none;
 }
@@ -132,16 +134,17 @@ i {
 .navbar--burger__button {
     width: 25px;
     height: 3px;
-    background-color: #FFF;
+    background-color: var(--white);
     border-radius: 2.5px;
     transition: all 0.25s ease-in-out;
 }
 
-.navbar--burger__button::before, .navbar--burger__button::after {
+.navbar--burger__button::before,
+.navbar--burger__button::after {
     position: absolute;
     width: 25px;
     height: 3px;
-    background-color: #FFF;
+    background-color: var(--white);
     border-radius: 2.5px;
     transition: all 0.25s ease-in-out;
     content: '';
@@ -169,7 +172,8 @@ i {
 }
 
 /*Parallax effect*/
-.parallax1, .parallax2 {
+.parallax1,
+.parallax2 {
     min-height: 17em;
     background-attachment: fixed;
     background-position: center;
@@ -214,7 +218,8 @@ i {
     border: var(--pi-border) 10px solid;
 }
 
-.index--button:hover, .index--button:focus {
+.index--button:hover,
+.index--button:focus {
     animation: index_animation 0.5s forwards;
 }
 
@@ -243,50 +248,37 @@ i {
     color: var(--white);
 }
 
-.facebook, .twitter, .github {
+.facebook,
+.twitter,
+.github {
     display: flex;
     flex-direction: column;
     text-align: center;
     cursor: pointer;
 }
 
-.facebook:hover *, .facebook:focus * {
-    animation: fb 0.2s forwards;
+.facebook,
+.twitter,
+.github {
+    transition: all;
 }
 
-.twitter:hover *, .twitter:focus * {
-    animation: tw 0.2s forwards;
+.facebook:hover *,
+.facebook:focus * {
+    color: var(--fb-clr);
 }
 
-.github:hover *, .github:focus * {
-    animation: gh 0.2s forwards;
+.twitter:hover *,
+.twitter:focus * {
+    color: var(--tw-clr);
+}
+
+.github:hover *,
+.github:focus * {
+    color: var(--gh-clr);
 }
 
 /*Animations*/
-@keyframes fb {
-    100%{
-        color: var(--fb-clr);
-    }
-}
-
-@keyframes tw {
-    100%{
-        color: var(--tw-clr);
-    }
-}
-
-@keyframes gh {
-    100%{
-        color: var(--gh-clr);
-    }
-}
-
-@keyframes navbar_after {
-    100%{
-        width: 100%;
-    }
-}
-
 @keyframes index_animation {
     100% {
         background-color: var(--gh-clr);
@@ -307,7 +299,8 @@ i {
         cursor: pointer;
     }
 
-    .navbar--item:hover::after, .navbar--item:focus::after {
+    .navbar--item:hover::after,
+    .navbar--item:focus::after {
         animation: none;
     }
 
@@ -323,7 +316,9 @@ i {
         background: var(--white);
     }
 
-    .parallax1, .parallax2, .parallax3 {
+    .parallax1,
+    .parallax2,
+    .parallax3 {
         margin-inline: 50px;
     }
 
@@ -339,7 +334,9 @@ i {
         background: var(--white);
     }
 
-    .parallax1, .parallax2, .parallax3 {
+    .parallax1,
+    .parallax2,
+    .parallax3 {
         margin-inline: 100px;
     }
 
@@ -363,7 +360,9 @@ i {
         display: inline;
     }
 
-    .parallax1, .parallax2, .parallax3 {
+    .parallax1,
+    .parallax2,
+    .parallax3 {
         margin-inline: 200px;
     }
 }
