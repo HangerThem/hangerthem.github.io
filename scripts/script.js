@@ -26,3 +26,6 @@ document.querySelector('[data-mode]').addEventListener('click', () => {
   if (theme === 'light') document.querySelector('html').dataset.theme = 'dark'
   else document.querySelector('html').dataset.theme = 'light'
 })
+
+const date = new Date()
+document.querySelector('[data-copy]').innerHTML = `© 2020 - ${date.getFullYear()}, František Borisjuk`
