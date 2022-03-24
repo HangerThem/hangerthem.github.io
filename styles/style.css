@@ -338,7 +338,8 @@ i {
          display: none;
     }
 
-    body {
+    section {
+        width: 100vw;
         background: var(--white);
     }
 }
