@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./imgs/logo.svg" type="favicon">
     <script src="./scripts/script.js" defer></script>
+    <script src="./scripts/clock.js" defer></script>
     <title>Home</title>
 </head>
-<body onload="startTime()">
+<body>
 
     <navbar class="navbar">
         <div class="navbar--clock">
@@ -24,21 +25,56 @@
         <hr data-cutter class="navbar--cutter">
         <div data-navbar class="navbar--shrink">
             <a href="home.html" class="navbar--item"><i class="fa fa-home"></i> Home</a>  
-            <a href="news.html" class="navbar--item"><i class="fa fa-bell-o"></i> News</a>  
-            <a href="contact.html" class="navbar--item"><i class="fa fa-envelope-o"></i> Contact</a>
-            <a href="about.html" class="navbar--item"><i class="fa fa-info "></i> About</a>
+            <a href="cs.html" class="navbar--item"><i class="fa fa-bell-o"></i> News</a>  
+            <a href="cs.html" class="navbar--item"><i class="fa fa-envelope-o"></i> Contact</a>
+            <a href="cs.html" class="navbar--item"><i class="fa fa-info "></i> About</a>
         </div>
     </navbar>
 
+    <section>
+        <div class="left-text">
+            <h1 class="title1">About</h1>
+            <p>I am student of CS degree on SPŠSE a VOŠ.</p>
+            <p>I like games, playing D&D and science.</p>
+            <p>My favourite books are: LOTR, The Hobbit and The Silmarillion.</p>
+        </div>
+
+        <div class="parallax1"></div>
+
+        <div class="right-text">
+            <h1 class="title2">Skills</h1>
+            <p>HTML, CSS, JS, Java, Python, and a little bit in C++</p>
+            <p>I have been developing websites for over 7 years now.</p>
+            <p>I learned Python and Java 2 years ago.</p>
+            <p>I started learning C++ in early 2021.</p>
+        </div>
+
+        <div class="parallax2"></div>
+
+        <div class="left-text">
+            <h1 class="title2">Goals & projects</h1>
+            <p>One of my biggist goals is obviously to complete high school.</p>
+            <p>I want to be a programmer and web developer.</p>
+            <p>The programming languages I want to learn include C, C#, Swift, PHP, and maybe Rust.</p>
+            <p>My projects include game programming, website development, and to improve in all different branches of programming.</p>
+        </div>
+    </section>
+
+
+
     <footer class="footer">
         <div class="footer--icons">
-            <div class="facebook" onclick="alertOpen()">
-                <a><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
-                <a class="icon-names">Facebook</a>
+            <div class="gitlab" href="https://gitlab.com/HangerThem" rel="noopener noreferrer" target="_blank">
+                <a href="https://gitlab.com/HangerThem" rel="noopener noreferrer" target="_blank">
+                    <i class="fa fa-gitlab icon" aria-hidden="true"></i>
+                </a>
+                <a href="https://gitlab.com/HangerThem" rel="noopener noreferrer" target="_blank" class="icon-names">Gitlab</a>
             </div>
-            <div class="twitter" onclick="alertOpen()">
-                <a><i class="fa fa-twitter-square icon" aria-hidden="true"></i></a>
-                <a class="icon-names">Twitter</a>
+            <div class="linkedin" href="https://www.linkedin.com/in/franti%C5%A1ek-borisjuk-022686225/" rel="noopener noreferrer" target="_blank">
+                <a href="https://www.linkedin.com/in/franti%C5%A1ek-borisjuk-022686225/" rel="noopener noreferrer" target="_blank">
+                    <i class="fa fa-linkedin-square icon" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/franti%C5%A1ek-borisjuk-022686225/"  rel="noopener noreferrer" target="_blank" class="icon-names">LinkedIn</a>
             </div>
             <div class="github">
                 <a href="https://github.com/HangerThem" rel="noopener noreferrer" target="_blank">
@@ -47,6 +83,7 @@
                 <a href="https://github.com/HangerThem" rel="noopener noreferrer" target="_blank" class="icon-names">GitHub</a>
             </div>
         </div>
+        <p data-copy class="copyright--text"/>
     </footer>
 
 </body>

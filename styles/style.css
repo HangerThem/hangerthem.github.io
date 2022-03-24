@@ -3,20 +3,36 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /*Colors*/
-:root {
+[data-theme="light"] {
     --bg1-clr: #575757;
     --bg2-clr: #757373;
-    --fb-clr: #3B5998;
+    --gl-clr: #fc6d27;
+    --in-clr: #0e76a8;
     --gh-clr: #333;
     --index-clr: #444;
     --pi-bg1: #202020;
     --pi-bg2: #000;
     --pi-border: #7C7C7C;
-    --primary: #000;
+    --primary: #111;
     --shadow: #7C7C7C;
     --text-border: #a0a0a0;
-    --tw-clr: #1DA1F2;
     --white: #ddd;
+}
+
+[data-theme="dark"] {
+    --bg1-clr: #575757;
+    --bg2-clr: #757373;
+    --gl-clr: #fc6d27;
+    --in-clr: #0e76a8;
+    --gh-clr: #333;
+    --index-clr: #444;
+    --pi-bg1: #202020;
+    --pi-bg2: #000;
+    --pi-border: #7C7C7C;
+    --primary: #ddd;
+    --shadow: #7C7C7C;
+    --text-border: #a0a0a0;
+    --white: #111;
 }
 
 /*Generic setting*/
@@ -28,6 +44,7 @@
 body {
     display: flex;
     flex-direction: column;
+    background: linear-gradient(48deg, var(--bg1-clr) 0%, var(--primary) 100%);
     margin: 0;
     min-height: 100vh;
     min-width: 100vw;
@@ -184,11 +201,11 @@ i {
 }
 
 .parallax1 {
-    background-image: url("../imgs/eärendilVsAncalagon.jpeg");
+    background-image: url("../img/eärendilVsAncalagon.jpeg");
 }
 
 .parallax2 {
-    background-image: url("../imgs/programmingLanguages.jpeg");
+    background-image: url("../img/programmingLanguages.jpeg");
 }
 
 /*Index page*/
@@ -199,6 +216,7 @@ i {
 
 .index--clock {
     display: flex;
+    width: 100vw;
     justify-content: space-between;
 }
 
@@ -250,8 +268,8 @@ i {
     color: var(--white);
 }
 
-.facebook,
-.twitter,
+.gitlab,
+.linkedin,
 .github {
     display: flex;
     flex-direction: column;
@@ -259,19 +277,32 @@ i {
     cursor: pointer;
 }
 
-.facebook:hover *,
-.facebook:focus * {
-    color: var(--fb-clr);
+.gitlab:hover,
+.linkedin:hover,
+.github:hover {
+    transform: scale(115%);
+    transition: transform 0.25s ease;
 }
 
-.twitter:hover *,
-.twitter:focus * {
-    color: var(--tw-clr);
+.gitlab:hover *,
+.gitlab:focus * {
+    color: var(--gl-clr);
+}
+
+.linkedin:hover *,
+.linkedin:focus * {
+    color: var(--in-clr);
 }
 
 .github:hover *,
 .github:focus * {
     color: var(--gh-clr);
+}
+
+.copyright--text {
+    margin-bottom: 0;
+    text-align: center;
+    color: var(--white);
 }
 
 /*Animations*/
@@ -303,6 +334,14 @@ i {
     .navbar--shrink {
         display: none;
     }
+
+    .navbar--item::after {
+         display: none;
+    }
+
+    body {
+        /*background: var(--white);*/
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -310,16 +349,17 @@ i {
         margin-inline: 50px;
         padding-inline: 5px;
         background: var(--white);
+        height: 100vh;
     }
 
     .parallax1,
     .parallax2,
     .parallax3 {
-        margin-inline: 50px;
+        margin: -5px;
     }
 
-    body {
-        background: var(--bg1-clr);;
+    .navbar--shrink {
+        display: inline;
     }
 }
 
@@ -328,20 +368,17 @@ i {
         margin-inline: 100px;
         padding-inline: 10px;
         background: var(--white);
+        height: 100vh;
     }
 
     .parallax1,
     .parallax2,
     .parallax3 {
-        margin-inline: 100px;
+        margin: -10px;
     }
 
     .navbar--shrink {
         display: inline;
-    }
-
-    body {
-        background: var(--bg1-clr);;
     }
 }
 
@@ -350,6 +387,7 @@ i {
         margin-inline: 200px;
         padding-inline: 20px;
         background-color: var(--white);
+        height: 100%;
     }
     
     .navbar--shrink {
@@ -359,6 +397,6 @@ i {
     .parallax1,
     .parallax2,
     .parallax3 {
-        margin-inline: 200px;
+        margin-inline: -20px;
     }
 }
