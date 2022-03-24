@@ -47,7 +47,6 @@ body {
     background: linear-gradient(48deg, var(--bg1-clr) 0%, var(--primary) 100%);
     margin: 0;
     min-height: 100vh;
-    min-width: 100vw;
 }
 p {
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
@@ -340,7 +339,7 @@ i {
     }
 
     body {
-        /*background: var(--white);*/
+        background: var(--white);
     }
 }
 
