@@ -65,18 +65,19 @@ i {
 /*Nonspecific*/
 .left-text {
     display: block;
-    padding-inline: 20px;
+    padding: 25px;
     text-align: left;
 }
 
 .right-text {
     display: block;
-    padding-inline: 20px;
+    padding: 25px;
     text-align: right;
 }
 
 .title1 {
-    margin: 2.5em 0 0 0;
+    font-size: 3rem;
+    margin: 2.5rem 0 0 0;
     color: var(--primary);
 }
 
