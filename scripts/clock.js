@@ -11,16 +11,8 @@ setInterval(() => {
   const minutes = timeFormater.format(date.getMinutes())
   const seconds = timeFormater.format(date.getSeconds())
 
-  let dayName
-
-  if (numberOfDay === 0) dayName = 'SUN'
-  if (numberOfDay === 1) dayName = 'MON'
-  if (numberOfDay === 2) dayName = 'TUE'
-  if (numberOfDay === 3) dayName = 'WED'
-  if (numberOfDay === 4) dayName = 'THU'
-  if (numberOfDay === 5) dayName = 'FRI'
-  if (numberOfDay === 6) dayName = 'SAT'
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
   document.querySelector('[data-time]').innerHTML = `${hours}:${minutes}:${seconds}`
-  document.querySelector('[data-date]').innerHTML = `${dayName} ${day} / ${month} / ${year}`
+  document.querySelector('[data-date]').innerHTML = `${days[numberOfDay]} ${day} / ${month} / ${year}`
 }, 1)
