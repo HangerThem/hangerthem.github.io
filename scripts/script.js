@@ -21,10 +21,11 @@ document.querySelector('[data-burger]').addEventListener('click', () => {
 })
 
 //Dark/Light mode
+document.querySelector('html').dataset.theme = localStorage.getItem('mode') || 'light'
 document.querySelector('[data-mode]').addEventListener('click', () => {
-  const theme = document.querySelector('html').dataset.theme
-  if (theme === 'light') document.querySelector('html').dataset.theme = 'dark'
-  else document.querySelector('html').dataset.theme = 'light'
+  if (localStorage.getItem('mode') === 'dark') localStorage.setItem('mode', 'light')
+  else localStorage.setItem('mode', 'dark')
+  document.querySelector('html').dataset.theme = localStorage.getItem('mode')
 })
 
 const date = new Date()
