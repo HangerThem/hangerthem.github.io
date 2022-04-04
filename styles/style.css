@@ -350,7 +350,7 @@ i {
         margin-inline: 50px;
         padding-inline: 5px;
         background: var(--white);
-        height: 100vh;
+        height: 100%;
     }
 
     .parallax1,
@@ -369,7 +369,7 @@ i {
         margin-inline: 100px;
         padding-inline: 10px;
         background: var(--white);
-        height: 100vh;
+        height: 100%;
     }
 
     .parallax1,
